@@ -19,6 +19,7 @@
 			<groupId>cn.wx.mzpro</groupId>
 			<artifactId>wx-dao</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>

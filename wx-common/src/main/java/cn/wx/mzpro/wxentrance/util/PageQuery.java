@@ -1,8 +1,5 @@
 package cn.wx.mzpro.wxentrance.util;
 
-/**
- * Created by tim on 2020.03.27
- */
 
 import com.google.common.base.Splitter;
 
