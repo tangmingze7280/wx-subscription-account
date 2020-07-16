@@ -6,12 +6,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import cn.wx.mzpro.wxentrance.util.PageQuery;
 import cn.wx.mzpro.wxentrance.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 
 /**
@@ -23,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-07-16
  */
 @RestController
-@RequestMapping("/wx-cron")
+@RequestMapping("/wxCron")
 public class WxCronController {
 
     @Autowired
@@ -92,5 +89,9 @@ public class WxCronController {
     @RequestMapping(value = "queryByPage",method = RequestMethod.GET)
     public Result<IPage<WxCron>> queryByPage(PageQuery pageQuery) {
         return wxCronService.queryByPage(pageQuery);
+    }
+    @GetMapping("list")
+    public List<WxCron> list() {
+        return wxCronService.list();
     }
 }
